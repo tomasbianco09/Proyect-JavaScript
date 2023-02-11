@@ -90,6 +90,7 @@ select {
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.3);
+  overflow: auto;
 }
 
 .modal-active {
