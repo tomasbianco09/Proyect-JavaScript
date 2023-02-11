@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es el sitio web de nuestra empresa, Podras ver donde estamos ubicados">
+    <title>Ubicacion</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+<body class="bodyPadreGridUbi">
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #c2c5aa;">
+            <div class="navLogo">
+                <img src="../img/logonav.png" alt="logo de la pagina">
+            </div>
+            <div class="container-fluid">
+                <a class=" navInicio navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="producto.html">Producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ubicacion.html">Ubicacion</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="ubicacionGrid">
+        <section class="ubicacionTexts">
+            <h1>Ubicacion</h1>
+            <p>Somos una empresa con una unica sucursal ubicada en Mendoza, Argentina.</p>
+            <div class="ubicacionMaps">
+                <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26804.49853953225!2d-68.87602867070122!3d-32.88329794055299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e093ec45179bf%3A0x205a78f6d20efa3a!2sMendoza%2C%20Capital%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1655787027731!5m2!1ses-419!2sar" width="1000" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <!-- Seccion del footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <img width="30" height="24" src="../img/logo.png" alt="logo de pagina">
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Tomas Bianco</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><a href="https://twitter.com/home?lang=es" target="_blank"><img width="24" height="24" src="../img/twitter.svg" alt="Logo twitter"></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"> <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img width="24" height="24" src="../img/instagram.svg" alt="Logo instagram"></a></li>
+          </ul>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

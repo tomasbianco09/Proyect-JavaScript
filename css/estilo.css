@@ -1,0 +1,1390 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/* MAPS */
+
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+
+
+.itemUno {
+  color: #2121f8; 
+}
+
+.itemDos {
+  color: #b6b646; 
+}
+
+.itemTres {
+  color: #d81e1e; 
+}
+
+.extendAgg, .serviciosTitulo {
+  background-color: white;
+  width: 100%;
+  height: 100%; 
+}
+
+.list-item {
+  list-style: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden; 
+}
+
+/* Seccion  carrito */
+
+#cesta-carrito {
+  border: none;
+  color: #000000;
+  font-size: 25px;
+  background-color: #c2c5aa;
+  border-radius: 10%;
+  margin: 0 0  0 5px;
+  padding: 5px;
+  transition: all .3s;
+}
+
+#cesta-carrito #contador-carrito {
+ margin: 0 0 0 10px;
+}
+
+#cesta-carrito:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#cesta-carrito:focus {
+  outline: none;
+}
+
+#producto-contenedor {
+  display: grid;
+  gap: 1rem;
+  max-width: 60rem;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+select {
+  display: inline;
+  text-align: center;
+  border: 1px solid lightskyblue;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: #ffffff;
+  min-width: 800px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.modal-carrito #btn-cerrar-carrito {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: rgb(0, 0, 0) !important;
+  border: none;
+  background-color: white;
+}
+
+.modal-carrito #btn-cerrar-carrito:hover {
+  cursor: pointer;
+}
+
+.modal-carrito #btn-cerrar-carrito:focus {
+  outline: none;
+}
+
+.modal-carrito .producto-precio {
+  padding-top: 10px;
+}
+
+
+.productoEnCarrito {
+  border-left: 5px solid #000000;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 12px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productoEnCarrito p {
+  margin: 8px 10px 0 0;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid #c2c5aa;
+}
+
+.productoEnCarrito .btn-danger {
+  color: rgb(0, 0, 0) !important;
+}
+
+.productoEnCarrito .boton-eliminar {
+  background-color: #ffffff;
+}
+
+.productoEnCarrito .boton-eliminar:hover {
+  background-color: #c2c5aa;
+}
+
+.boton-eliminar{
+  color: #000000;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+  
+}
+
+.boton-eliminar:focus {
+  outline: none;
+}
+
+/* Fin seccion carrito */
+
+/* Seccion Nav */
+header {
+  position: sticky;
+  top: 0%;
+  grid-area: nav;
+  z-index: 2;
+  position: relative; 
+}
+header .textos-header {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; 
+}
+
+.headerDec {
+  width: 100%;
+  height: 700px;
+  background: #c2c5aa;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(194, 197, 170, 0.5), white), url(../img/fondo.jpg);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(194, 197, 170, 0.5), white), url(../img/fondo.jpg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed; 
+}
+
+.textos-header h1 {
+  font-size: 50px;
+  color: black;
+  font-weight: bold; 
+}
+
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: black; 
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 20px; 
+}
+
+nav {
+  width: 100%;
+  height: 80px; 
+}
+
+.navLogo img {
+  margin: 25px 25px 25px 5px;
+  width: 80px;
+  height: 70px; 
+}
+
+.btn {
+  background-color: white;
+  border: none; 
+}
+.btn:hover {
+  background-color: #F1FFE7;
+  color: #000; 
+}
+
+/* Seccion Sobre Nosotros */
+.tituloNosotros {
+  background-color: white;
+  /* width: 100%;
+  height: 30%; */
+  margin: 0 0 20px 0;
+  grid-area: nosotros; 
+}
+.tituloNosotros h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px 0 20px 0; 
+}
+
+.tittles2 {
+  margin: 30px 0 0 60px; 
+}
+
+.sobreNosotros {
+  display: flex; 
+}
+.sobreNosotros .primerImg {
+  width: 20%;
+  height: 25%;
+  box-shadow: 0 0 5px grey;
+  margin: 0 50px 0 0; 
+}
+.sobreNosotros .ask1 {
+  text-align: left;
+  margin: 20px 50px 0 50px;
+  font-size: 20px; 
+}
+.sobreNosotros .segundaImg {
+  width: 20%;
+  height: 25%;
+  box-shadow: 0 0 5px grey;
+  margin: 20px 0 0 50px; 
+}
+.sobreNosotros .ask2 {
+  text-align: left;
+  margin: 20px 50px 0 50px;
+  font-size: 20px; 
+}
+
+/* Seccion Clientes */
+.tituloClientes {
+  background-color: white;
+  width: 100%;
+  height: 30%;
+  margin: 50px 0 20px 0;
+  grid-area: cliente; 
+}
+.tituloClientes h2 {
+  font-size: 50px;
+  text-align: center;
+  padding: 0 0 80px 0;
+  /* margin: 0 0 80px 0; */ 
+}
+
+.clientes {
+  text-align: center;
+  display: flex; 
+}
+.clientes img {
+  width: 300px;
+  box-shadow: 0 0 20px grey; 
+}
+.clientes p {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 30px 80px 30px;
+  /* margin: 20px 0 80px 0 */ 
+}
+
+/* Seccion Productos */
+.productosGrid {
+  grid-area: productos; 
+}
+
+.tituloNuestroP {
+  background-color: white;
+  width: 100%;
+  height: 10%;
+  margin: 40px 0 30px 0;
+}
+.tituloNuestroP h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 20px; 
+}
+.tituloNuestroP p {
+  text-align: center;
+  font-size: 20px; 
+}
+
+.carousel {
+  margin: 50px 25% 5px 25%;
+  width: 50%;
+  box-shadow: 0 0 10px #24303c; 
+}
+.carousel img {
+  opacity: 0.9; 
+}
+.carousel a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black; 
+}
+.carousel p {
+  margin: 5px 5px 20px 5px; 
+}
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0; 
+}
+
+.tittleP {
+  background-color: #c2c5aa;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 10px 0 10px 0 #c2c5aa; 
+}
+
+.contenedor-colecciones {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 40px; 
+}
+
+.productsImg {
+  margin-left: 40px;
+  margin-right: 40px; 
+}
+.productsImg h3 {
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 20px; 
+}
+.productsImg img {
+  width: 200px;
+  height: 200px;
+  transition: 0.4s; 
+}
+.productsImg img:hover {
+  transform: scale(1.1); 
+}
+
+#container-lg {
+  width: 80%;
+  height: 100%;
+  padding-top: 15px;
+  display: flex;
+  margin: auto;
+ 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  transition-duration: 0.2s;
+  width: 270px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 50px;
+  border: 2px solid #c2c5aa;
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8); 
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .product-info p {
+  font-size: 18px;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+.card .product-image {
+  width: 230px;
+  margin: 20px auto; 
+}
+.card .product-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.4s; 
+}
+.card .product-image img:hover {
+  transform: scale(1.1); 
+}
+.card .product-info h4 {
+  font-size: 18px;
+  padding: 0 25px;
+  margin-bottom: 10px; 
+}
+.card .btn-p {
+  width: 100%; 
+  text-decoration: none;
+}
+.btn-p .button {
+  width: 100%;
+  padding: 10px;
+  background: #c2c5aa;
+  border: 1px solid #c2c5aa;
+  outline: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0 0 15px 15px; 
+}
+.btn-p .button:hover {
+  background-color: rgba(194, 197, 170, 0.5);
+  color: #000; 
+}
+.tittleColecciones {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  box-shadow: 10px 0 10px 0 #c2c5aa; 
+}
+.tittleColecciones h2 {
+  font-size: 80px; 
+}
+.tittleCol {
+  background-color: #c2c5aa;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  box-shadow: 10px 0 10px 0 #c2c5aa; 
+}
+.tittleCol h2 {
+  font-size: 40px; 
+}
+
+/* Seccion Servicios */
+
+.serviciosGrid {
+  grid-area: servicios; 
+}
+.serviciosTitulo {
+  margin: 30px 0 30px 0; 
+}
+.serviciosTitulo h1 {
+  font-size: 50px;
+  text-align: center; 
+}
+
+/* MARKETING CONTENT */
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center; 
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem; 
+}
+
+/* Featurettes */
+
+.featurette-divider {
+  margin: 5rem 0; 
+}
+
+.featurette-heading {
+  letter-spacing: 0 0.5rem;
+  margin-top: 15%; 
+}
+
+.dos {
+  letter-spacing: 0 0.5rem;
+  margin-top: 5%; 
+}
+
+.serv a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold; 
+}
+
+/* Seccion Ubicacion */
+
+.ubicacionGrid {
+  grid-area: ubicacion; 
+}
+
+.ubicacionTexts {
+  padding: 30px 0 30px 0;
+  background-color: white; 
+}
+
+.ubicacionTexts h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px 0 30px 0; 
+}
+
+.ubicacionTexts p {
+  font-size: 20px;
+  text-align: center; 
+}
+
+.ubicacionMaps {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 0 20px grey;
+  width: 70%;
+  height: 90%; 
+}
+
+.googleMaps {
+  width: 100%; 
+}
+
+/* Seccion de Footer */
+
+footer {
+  grid-area: footer; 
+}
+
+.bodyPadreGrid {
+  display: grid;
+  grid-template-areas: "nav" "nosotros" "cliente" "footer"; 
+}
+
+.bodyPadreGridProductos {
+  display: grid;
+  grid-template-areas: "nav" "productos" "footer"; 
+}
+
+.bodyPadreGridService {
+  display: grid;
+  grid-template-areas: "nav" "servicios" "footer"; 
+}
+
+.bodyPadreGridUbi {
+  display: grid;
+  grid-template-areas: "nav" "ubicacion" "footer"; 
+}
+
+.bodyPadreGridContact {
+  display: grid;
+  grid-template-areas: "nav" "contacto" "footer"; 
+}
+
+@media screen and (max-width: 1440px) {
+  /* Seccion carrito */
+  .modal-carrito {
+    min-width: 800px;
+  }
+  
+  /* Seccion Nav */
+  header {
+    position: sticky;
+    top: 0%;
+    grid-area: nav;
+    z-index: 2; }
+    header .textos-header {
+      display: flex;
+      height: 500px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
+  .headerDec {
+    width: 100%;
+    height: 700px;
+    background: #c2c5aa;
+    background: -webkit-linear-gradient(to right, rgba(194, 197, 170, 0.5), white), url(../img/fondo.jpg);
+    background: linear-gradient(to right, rgba(194, 197, 170, 0.5), white), url(../img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; }
+  .textos-header h1 {
+    font-size: 50px;
+    color: black;
+    font-weight: bold; }
+  .textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: black; }
+  .wave {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 20px; }
+  nav {
+    width: 100%;
+    height: 80px; }
+  .navLogo img {
+    margin: 25px 25px 25px 5px;
+    width: 70px;
+    height: 60px; }
+  .btn {
+    background-color: white;
+    border: none; }
+    .btn:hover {
+      background-color: #F1FFE7;
+      color: #000; }
+  /* Sobre Nosotros */
+  .sobreNosotros {
+    display: flex; }
+    .sobreNosotros .primerImg {
+      width: 20%;
+      height: 25%;
+      box-shadow: 0 0 5px grey;
+      margin: 20px 50px 0 0; }
+    .sobreNosotros .ask1 {
+      text-align: left;
+      margin: 20px 50px 0 50px;
+      font-size: 20px; }
+    .sobreNosotros .segundaImg {
+      width: 20%;
+      height: 25%;
+      box-shadow: 0 0 5px grey;
+      margin: 20px 0 0 50px; }
+    .sobreNosotros .ask2 {
+      text-align: left;
+      margin: 20px 50px 0 50px;
+      font-size: 20px; }
+  /* Nuestro producto */
+  .tituloNuestroP {
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    margin: 30px 0 30px 0; }
+    .tituloNuestroP h1 {
+      font-size: 50px;
+      text-align: center;
+      padding-bottom: 20px; }
+    .tituloNuestroP p {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px; }
+  .carousel {
+    margin: 0px 25% 5px 25%;
+    width: 50%;
+    box-shadow: 0 0 10px #24303c; }
+  .productsImg img {
+    width: 250px;
+    height: 250px;
+    transition: 0.4s; }
+    .productsImg img:hover {
+      transform: scale(1.1); }
+  /* Seccion servicios */
+  .serviciosTitulo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+    .serviciosTitulo h1 {
+      font-size: 50px;
+      text-align: center; }
+  .serviciosItems h2 {
+    font-size: 30px;
+    text-align: justify;
+    margin: 0 0 20px 50px; }
+  .serviciosMantenimiento {
+    display: flex; }
+    .serviciosMantenimiento a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: black; }
+    .serviciosMantenimiento img {
+      width: 200px;
+      box-shadow: 0 0 5px grey;
+      margin: 0 200px 50px 50px; }
+    .serviciosMantenimiento p {
+      font-size: 20px; }
+  .serviciosAtencion {
+    display: flex; }
+    .serviciosAtencion img {
+      width: 220px;
+      height: 200px;
+      box-shadow: 0 0 5px grey;
+      margin: 0 200px 50px 120px; }
+    .serviciosAtencion p {
+      font-size: 20px; }
+  /* Seccion de Ubicacion */
+  .ubicaacionTexts {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+  .ubicacionTexts h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px; }
+  .ubicacionTexts p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px; }
+  .ubicacionMaps {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 20px grey;
+    width: 70%;
+    height: 90%; }
+}
+@media screen and (max-width: 990px) {
+  /* Seccion carrito */
+  .modal-carrito {
+    position: relative;
+    background-color: #ffffff;
+    min-width: 700px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+  
+  /* Seccion Nav */
+  header {
+    background-position: center; }
+  nav {
+    width: 100%;
+    height: 80px; }
+  .nav-item {
+    margin-bottom: 20px; }
+    .nav-item a {
+      margin-top: 20px; }
+  .navLogo img {
+    margin: 10px 0 25px 5px;
+    width: 50px;
+    height: 40px;
+    display: none !important; }
+  .navbar-toggler {
+    width: 30px;
+    height: 30px;
+    color: #c2c5aa;
+    border: none; }
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    margin: -20px; }
+  .form-control {
+    margin-bottom: 10px; }
+  .btn {
+    background-color: white;
+    border: none;
+    height: 40px;
+    margin-bottom: 10px; }
+    .btn:hover {
+      background-color: #F1FFE7;
+      color: #000; }
+  .container-fluid {
+    background-color: #c2c5aa; }
+  /* Seccion Producto */
+  .tituloNuestroP {
+    background-color: white;
+    width: 100%;
+    height: 8%;
+    margin: 30px 0 30px 0; }
+  .carousel {
+    margin: 90px 10% 50px 10%;
+    width: 80%;
+    box-shadow: 0 0 10px #24303c; }
+    .carousel img {
+      opacity: 0.9; }
+    .carousel a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: black; }
+    .carousel p {
+      margin: 5px 5px 20px 5px; }
+  .carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0; }
+  .tittleP {
+    background-color: #c2c5aa;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 10px 0 10px 0 #c2c5aa; }
+  .contenedor-colecciones {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 40px; }
+  .productsImg {
+    margin-left: 40px;
+    margin-right: 40px; }
+    .productsImg h3 {
+      color: black;
+      margin-bottom: 5px;
+      margin-top: 20px; }
+    .productsImg img {
+      width: 220px;
+      height: 220px;
+      transition: 0.4s; }
+      .productsImg img:hover {
+        transform: scale(1.1); }
+  /* Seccion Servicios */
+  .serviciosGrid {
+    grid-area: servicios; }
+  .serviciosTitulo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+    .serviciosTitulo h1 {
+      font-size: 50px;
+      text-align: center; }
+  /* MARKETING CONTENT */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center; }
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem; }
+  /* Featurettes */
+  .featurette-divider {
+    margin: 5rem 0; }
+  .featurette-heading {
+    letter-spacing: 0 0.5rem;
+    margin-top: 10%; }
+  .serv a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; }
+  .servimg img {
+    margin-top: 10%; }
+  /* Seccion de Ubicacion */
+  .ubicaacionTexts {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+  .ubicacionTexts h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px; }
+  .ubicacionTexts p {
+    font-size: 20px;
+    text-align: center; }
+  .ubicacionMaps {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 20px grey;
+    width: 70%;
+    height: 90%; }
+  .googleMaps {
+    width: 100%; }
+}
+@media screen and (max-width: 768px) {
+  /* Seccion carrito */
+  .modal-carrito {
+    min-width: 500px;
+  }
+  
+  /* Seccion Nav */
+  header {
+    background-position: center; }
+  nav {
+    width: 100%;
+    height: 80px; }
+  .nav-item {
+    margin-bottom: 20px; }
+    .nav-item a {
+      margin-top: 20px; }
+  .navLogo img {
+    margin: 10px 0 25px 5px;
+    width: 50px;
+    height: 40px;
+    display: none !important; }
+  .navbar-toggler {
+    width: 30px;
+    height: 30px;
+    color: #c2c5aa;
+    border: none; }
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    margin: -20px; }
+  .form-control {
+    margin-bottom: 10px; }
+  .btn {
+    background-color: white;
+    border: none;
+    height: 40px;
+    margin-bottom: 10px; }
+    .btn:hover {
+      background-color: #F1FFE7;
+      color: #000; }
+  .container-fluid {
+    background-color: #c2c5aa; }
+  /* Seccion Sobre Nosotros */
+  .tituloNosotros {
+    background-color: white;
+    /* width: 100%;
+    height: 30%; */
+    margin: 0 0 20px 0;
+    grid-area: nosotros; }
+    .tituloNosotros h1 {
+      font-size: 50px;
+      text-align: center;
+      padding: 20px 0 20px 0; }
+  .tittles2 {
+    margin: 30px 0 0 70px; }
+  .sobreNosotros {
+    display: flex; }
+    .sobreNosotros .primerImg {
+      display: none !important; }
+    .sobreNosotros .ask1 {
+      text-align: left;
+      margin: 20px 50px 0 50px;
+      font-size: 20px; }
+    .sobreNosotros .segundaImg {
+      display: none !important; }
+    .sobreNosotros .ask2 {
+      text-align: left;
+      margin: 20px 50px 0 50px;
+      font-size: 20px; }
+  /* Seccion Producto */
+  .tituloNuestroP {
+    background-color: white;
+    width: 100%;
+    height: 8%;
+    margin: 30px 0 30px 0; }
+  .carousel {
+    margin: 10px 10% 50px 10%;
+    width: 80%;
+    box-shadow: 0 0 10px #24303c; }
+    .carousel img {
+      opacity: 0.9; }
+    .carousel a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: black; }
+    .carousel p {
+      margin: 5px 5px 20px 5px; }
+  .carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0; }
+  .tittleP {
+    background-color: #c2c5aa;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 10px 0 10px 0 #c2c5aa; }
+  .contenedor-colecciones {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    flex-direction: column; }
+  .productsImg {
+    margin-left: 40px;
+    margin-right: 40px; }
+    .productsImg h3 {
+      color: black;
+      margin-bottom: 5px;
+      margin-top: 20px; }
+    .productsImg img {
+      width: 200px;
+      height: 200px;
+      transition: 0.4s; }
+      .productsImg img:hover {
+        transform: scale(1.1); }
+  /* Seccion Servicios */
+  .serviciosGrid {
+    grid-area: servicios; }
+  .serviciosTitulo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+    .serviciosTitulo h1 {
+      font-size: 50px;
+      text-align: center; }
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center; }
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem; }
+  /* Featurettes */
+  .featurette-divider {
+    margin: 5rem 0; }
+  .featurette-heading {
+    letter-spacing: 0 0.5rem;
+    margin-top: 10%; }
+  .serv a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; }
+  .servimg img {
+    margin-top: 10%; }
+  /* Seccion de Ubicacion */
+  .ubicaacionTexts {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; }
+  .ubicacionTexts h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px; }
+  .ubicacionTexts p {
+    font-size: 20px;
+    text-align: center; }
+  .ubicacionMaps {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 20px grey;
+    width: 80%;
+    height: 90%; }
+  .googleMaps {
+    width: 100%; }
+}
+@media screen and (max-width: 480px) {
+  /* Seccion carrito */
+  .modal-carrito {
+    min-width: 400px;
+  }
+  
+  /* Seccion Nav */
+  header {
+    background-position: center; 
+  }
+  header .textos-header {
+    height: 400px; 
+  }
+  header .textos-header h1 {
+    font-size: 30px; 
+  }
+  header .textos-header h2 {
+    font-size: 25px; 
+    }
+  .wave {
+    position: absolute;
+    width: 100%; }
+  nav {
+    width: 100%;
+    height: 80px; }
+  .nav-item {
+    margin-bottom: 20px; }
+  .nav-item a {
+    margin-top: 20px; 
+  }
+  .navLogo img {
+    margin: 10px 0 25px 5px;
+    width: 50px;
+    height: 40px;
+    display: none !important; 
+  }
+  .navbar-toggler {
+    width: 30px;
+    height: 30px;
+    color: #c2c5aa;
+    border: none; 
+  }
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 70px;
+    margin: -20px; 
+  }
+  .form-control {
+    margin-bottom: 10px; 
+  }
+  .btn {
+    background-color: white;
+    border: none;
+    height: 40px;
+    margin-bottom: 10px; 
+  }
+  .btn:hover {
+    background-color: #F1FFE7;
+    color: #000; 
+  }
+  .container-fluid {
+    background-color: #c2c5aa;
+  }
+
+  /* Seccion Ssobre Nosotros */
+
+  .tituloNosotros {
+    background-color: white;
+    width: 100%;
+    height: 45%;
+    margin: 0 0 20px 0;
+    grid-area: nosotros; 
+  }
+  .tituloNosotros h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0 20px 0; 
+  }
+  .tittles2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0; 
+  }
+  .sobreNosotros {
+    display: flex; 
+  }
+  .sobreNosotros .primerImg {
+    display: none !important; 
+  }
+  .sobreNosotros .ask1 {
+    text-align: left;
+    margin: 10px 50px 0 50px;
+    font-size: 18px; 
+  }
+  .sobreNosotros .segundaImg {
+    display: none !important; 
+  }
+  .sobreNosotros .ask2 {
+    text-align: left;
+    margin: 10px 50px 0 50px;
+    font-size: 18px; 
+  }
+
+  /* Seccion Clientes */
+
+  .tituloClientes {
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    margin: 60px 0 20px 0;
+    grid-area: cliente; 
+  }
+  .tituloClientes h2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 0 50px 0;
+    /* margin: 0 0 80px 0; } */
+  }
+  .clientes {
+    text-align: center;
+    display: flex; 
+  }
+  .clientes img {
+    width: 120px;
+    margin-left: 20px;
+    box-shadow: 0 0 20px grey; 
+  }
+  .clientes p {
+    text-align: center;
+    font-size: 12px;
+    padding: 20px 0 50px 5px;
+    /* margin: 20px 0 80px 0; */ 
+  }
+
+  /*Seccion Productos*/
+
+  .tituloNuestroP {
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    margin: 0 0 20px 0; 
+  }
+  .tituloNuestroP h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0 20px 0; 
+  }
+  .tituloNuestroP p {
+    text-align: center;
+    font-size: 18px; 
+  }
+  .carousel {
+    margin: 70px 10% 70px 10%;
+    width: 80%;
+    box-shadow: 0 0 10px #24303c; 
+  }
+  .carousel img {
+    opacity: 0.9; 
+  }
+  .carousel a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black; 
+  }
+  .carousel p {
+    margin: 5px 5px 20px 5px; 
+  }
+  .carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0; 
+  }
+  .tittleP {
+    background-color: #c2c5aa;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 10px 0 10px 0 #c2c5aa; 
+  }
+  .contenedor-colecciones {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    flex-direction: column; 
+  }
+  .productsImg {
+    margin-left: 40px;
+    margin-right: 40px; 
+  }
+  .productsImg h3 {
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 20px; 
+  }
+  .productsImg img {
+    width: 150px;
+    height: 150px;
+    transition: 0.4s; 
+  }
+  .productsImg img:hover {
+    transform: scale(1.1); 
+  }
+
+  /* Seccion Servicios */
+
+  .serviciosGrid {
+    grid-area: servicios; 
+  }
+  .serviciosTitulo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 30px 0; 
+  }
+  .serviciosTitulo h1 {
+    font-size: 20px;
+    text-align: center; 
+  }
+
+  /* MARKETING CONTENT */
+
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center; 
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem; 
+  }
+
+  /* Featurettes */
+
+  .featurette-divider {
+    margin: 1rem 0; 
+    }
+  .featurette-heading {
+    letter-spacing: 0 0.5rem;
+    margin-top: 15%; 
+  }
+  .dos {
+    letter-spacing: 0 0.5rem;
+    margin-top: 5%; 
+  }
+  .serv a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+  }
+
+  /* Seccion de Ubicacion */
+
+  .ubicaacionTexts {
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    margin: 30px 0 30px 0; 
+  }
+  .ubicacionTexts h1 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px; 
+  }
+  .ubicacionTexts p {
+    font-size: 15px;
+    text-align: center; 
+  }
+  .ubicacionMaps {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 20px grey;
+    width: 70%;
+    height: 90%; 
+  }
+  .googleMaps {
+    width: 100%;
+    height: 400px; 
+  }
+  
+}

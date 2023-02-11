@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es el sitio web de nuestra empresa, Estos son nuestros productos">
+    <title>Producto</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+
+<body class="bodyPadreGridProductos">
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #c2c5aa;">
+            <div class="navLogo">
+                <img src="../img/logonav.png" alt="logo de la pagina">
+            </div>
+            <div class="container-fluid">
+                <a class=" navInicio navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="producto.html">Producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ubicacion.html">Ubicacion</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Incio producto -->
+    <section class="tituloNuestroP">
+        <h1>Nuestro producto</h1>
+        <p>Te presentamos algunos de nuestros ejemplos mas buscados para implementar en tu hogar.</p>
+    </section>
+    <section class="productoPrincipal">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-dark " data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i0.wp.com/moovemag.com/wp-content/uploads/2020/03/dise%C3%B1o-de-interiores.jpg?fit=700%2C393&ssl=1&resize=1280%2C720"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Soft Interior</h5>
+                        <p>Este modelo de diseño es de los mas valorados que tenemos hasta el momento, si estas
+                            interteresado, te invitamos a comunicate con nosotros en el sector de contacto.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dnb2eg0emsxdz.cloudfront.net/cdn/13/images/curso-a-distancia-diseno-de-interiores_amp_primaria_1_1560503057.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Modern Interior</h5>
+                        <p>Para nosotros, este es uno de los modelos mas bonitos, no dudes en comunciarte en el
+                            sector de contacto alli seguiremos la
+                            comunicaion nosotros y nos pondremos en los detalles de tu compra.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.hogarmania.com/archivos/201708/ideas-para-decora-casa-playa-1280x720x80xX.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Estilo Nautico</h5>
+                        <p>Con una clara influencia por la estética mediterránea, el estilo náutico se basa en la
+                            decoración marina y los ambientes frescos y amplios. El estilo mediterráneo moderno
+                            destaca por su calidez y su confort y es ideal para terrazas y restaurantes junto al
+                            mar.
+                            En la seccion de contacto te podras comunicar con nosotros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="tittleP">
+        <h2>Colecciones</h2>
+    </section>
+    <div class="contenedor-colecciones">
+        <div class="productsImg">
+        <a href="../pages/colections/living.html"> <img src="../img/prod/living.png" alt=""> </a>
+        <h3>Living</h3>
+        </div>
+        <div class="productsImg">
+        <a href="../pages/colections/oficina.html"> <img src="../img/prod/desk.png" alt=""> </a>
+        <h3>Office</h3>
+        </div>
+        <div class="productsImg">
+        <a href="../pages/colections/dormitorio.html"> <img src="../img/prod/dormitorio.png" alt=""> </a>
+        <h3>Dormitorio</h3>
+        </div>
+    </div>
+
+    <!-- Carritio -->
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor">
+
+        </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+            <button type="button" class="btn btn-buy"> Finalizar compra </button>
+        </div>
+    </div>
+
+
+    <!-- Seccion del footer -->
+    <div class="container-xxl">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img width="30" height="24" src="../img/logo.png" alt="logo de pagina">
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Tomas Bianco</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><a href="https://twitter.com/home?lang=es"
+                            target="_blank"><img width="24" height="24" src="../img/twitter.svg" alt="Logo twitter"></a>
+                </li>
+                <li class="ms-3"><a class="text-muted" href="#"> <a href="https://www.instagram.com/?hl=es-la"
+                            target="_blank"><img width="24" height="24" src="../img/instagram.svg"
+                                alt="Logo instagram"></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
